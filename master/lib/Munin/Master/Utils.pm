@@ -739,7 +739,7 @@ sub munin_get_node {
 	    # Only complain on a blank key if is no key like that. Usually it
 	    # shouln't, so it avoids a needless regexp in this highly used
 	    # function
-	    ERROR "[ERROR] munin_get_node: Cannot work on hash node '$tmpvar'" if ($tmpvar !~ /\S/);
+	    ERROR "[ERROR] munin_get_node: Cannot work on hash node '$tmpvar'" if ($tmpvar =~ /\S/);
 	    return undef;
         }	
 	$hash = $hash->{$tmpvar};
